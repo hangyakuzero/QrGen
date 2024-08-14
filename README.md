@@ -1,4 +1,4 @@
-#QR GEN
+# QR GEN
 
 ## This is a simple web app that let's you generate qr code with an image
 
