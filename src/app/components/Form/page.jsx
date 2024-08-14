@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from 'react';
 import QRCode from 'qrcode.react';
-import ReactDOM from 'react-dom';
+
+import { createRoot } from 'react-dom/client';
 
 export default function Form() {
   const [text, setText] = useState('');
@@ -40,10 +41,11 @@ export default function Form() {
         }}
       />
     );
-
-    ReactDOM.render(
-      qrCodeElement,
-      document.getElementById('ls')
+ 
+    const ls=  document.getElementById('ls');
+    const root = createRoot(ls); 
+    root.render(
+      qrCodeElement
     );
 
     setQrCodeGenerated(true); // Update state to show Save button
